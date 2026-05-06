@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Broken Vinyl Club | Home</title>
+  <meta
+    name="description"
+    content="Broken Vinyl Club is an indie music collective blending modern energy with analogue warmth."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Space+Grotesk:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="theme.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body class="no-js">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <div class="site-frame">
+    <header class="site-header">
+      <div class="brand-lockup">
+        <a class="brand-mark" href="./index.html" aria-label="Broken Vinyl Club homepage">
+          <img
+            class="brand-mark__image"
+            src="./public/images/Logo.png"
+            srcset="./public/images/Logo.png 1x, ./public/images/Logo2X.png 2x"
+            alt="Broken Vinyl Club logo"
+            width="89"
+            height="89"
+          >
+        </a>
+        <div class="brand-copy">
+          <p class="eyebrow">Homepage</p>
+          <h1>Broken Vinyl Club</h1>
+        </div>
+      </div>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-navigation"
+      >
+        Menu
+      </button>
+
+      <nav class="site-nav" id="site-navigation" aria-label="Primary navigation">
+        <ul>
+          <li><a class="is-active" href="./index.html" aria-current="page">Home</a></li>
+          <li><a href="./our-story.html" data-coming-soon="Our Story">Our Story</a></li>
+          <li><a href="./music.html" data-coming-soon="Music">Music</a></li>
+          <li><a href="./tour.html" data-coming-soon="Tour">Tour</a></li>
+          <li><a href="./exclusive.html" data-coming-soon="Exclusive">Exclusive</a></li>
+          <li><a href="./contact.html" data-coming-soon="Contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <section class="hero section-panel">
+        <div
+          class="hero-art"
+          role="img"
+          aria-label="Abstract placeholder for the band's group portrait"
+        >
+          <span>Band portrait</span>
+        </div>
+
+        <div class="hero-copy">
+          <p class="section-kicker">Introduction</p>
+          <h2>Where analogue soul meets modern indie energy.</h2>
+          <p>
+            Broken Vinyl Club is an indie music collective driven by raw sound, nostalgic
+            aesthetics, and a passion for authentic expression. Blending modern indie energy
+            with the timeless culture of vinyl, the band creates immersive experiences through
+            live performances and exclusive releases.
+          </p>
+          <p>
+            Whether you are here to discover new music or reconnect with the warmth of analogue
+            sound, Broken Vinyl Club invites you into a world where music is felt, not just
+            heard.
+          </p>
+          <a class="button button-primary" href="#release-timetable">Explore our music</a>
+        </div>
+      </section>
+
+      <section class="schedule section-panel" id="release-timetable" aria-labelledby="schedule-title">
+        <div class="section-heading">
+          <p class="section-kicker">Release Timetable</p>
+          <h2 id="schedule-title">Upcoming drops and live sessions</h2>
+          <p>
+            A first look at what is coming next from Broken Vinyl Club while the full site is
+            still being built.
+          </p>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <caption>Broken Vinyl Club upcoming releases and events</caption>
+            <thead>
+              <tr>
+                <th scope="col">Date</th>
+                <th scope="col">Type</th>
+                <th scope="col">Title</th>
+                <th scope="col">Location</th>
+                <th scope="col">Format</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>25 Mar 2026</td>
+                <td>Single Launch</td>
+                <td>Static in Stereo</td>
+                <td>Manchester</td>
+                <td>Streaming + 7&quot; Vinyl</td>
+              </tr>
+              <tr>
+                <td>12 Apr 2026</td>
+                <td>Live Session</td>
+                <td>Midnight Warehouse Set</td>
+                <td>Leeds</td>
+                <td>Ticketed Event</td>
+              </tr>
+              <tr>
+                <td>04 May 2026</td>
+                <td>EP Preview</td>
+                <td>Needle Drop Diaries</td>
+                <td>Online</td>
+                <td>Members First</td>
+              </tr>
+              <tr>
+                <td>19 Jun 2026</td>
+                <td>Festival Slot</td>
+                <td>Summer Echoes</td>
+                <td>Bristol</td>
+                <td>Live Performance</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Broken Vinyl Club</p>
+      <p>Student web design project</p>
+      <p>&copy; <span id="current-year">2026</span></p>
+    </footer>
+  </div>
+
+  <div class="toast" id="coming-soon-toast" role="status" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+:root {
+  --vinyl: #231212;
+  --paper: #fff5da;
+  --accent: #8dabb0;
+  --sage: #677d80;
+  --paper-white: #f7f7f7;
+  --titlebar: #185ffa;
+  --titlebar-noise-a: rgba(75, 116, 221, 0.4);
+  --titlebar-noise-b: rgba(86, 45, 252, 0.21);
+  --text: #211818;
+  --muted: #5f5554;
+  --line: #201715;
+  --line-soft: rgba(32, 23, 21, 0.14);
+  --table-line: rgba(32, 23, 21, 0.18);
+  --surface: #ffffff;
+  --surface-warm: #fffaf0;
+  --shadow-soft: 0 18px 50px rgba(0, 0, 0, 0.16);
+  --shadow-button: 0 10px 22px rgba(35, 18, 18, 0.28);
+  --content-width: 1240px;
+}
