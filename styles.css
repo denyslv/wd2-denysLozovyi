@@ -216,6 +216,191 @@ a {
   padding: 3.2rem clamp(1rem, 3vw, 2rem);
 }
 
+.page-surface {
+  min-height: 560px;
+  border: 2px solid rgba(32, 23, 21, 0.82);
+  border-radius: 0.5rem;
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.page-heading h2 {
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Space Grotesk", "Segoe UI", sans-serif;
+  font-size: clamp(1.8rem, 3vw, 2.2rem);
+  letter-spacing: 0.05em;
+}
+
+.music-page {
+  display: flex;
+  flex-direction: column;
+  gap: 4.5rem;
+  border: 0;
+}
+
+.album-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(190px, 1fr));
+  gap: 2.5rem;
+  width: min(100%, 960px);
+  margin: 0 auto;
+}
+
+.album-card {
+  padding: 0.55rem;
+  background: rgba(231, 231, 231, 0.88);
+  border: 1px solid rgba(32, 23, 21, 0.18);
+  border-radius: 0.55rem;
+}
+
+.album-cover-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 168px;
+  border: 1px solid rgba(32, 23, 21, 0.45);
+  background: rgba(202, 202, 202, 0.95);
+  color: rgba(33, 24, 24, 0.85);
+  font-size: 0.9rem;
+}
+
+.album-cover-placeholder span {
+  display: inline-block;
+  text-transform: lowercase;
+  transform: rotate(-27deg);
+}
+
+.album-cover-media {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border: 1px solid rgba(32, 23, 21, 0.45);
+  background: rgba(202, 202, 202, 0.95);
+  object-fit: cover;
+}
+
+.album-card h3 {
+  margin: 0.75rem 0 0.2rem;
+  font-size: 0.96rem;
+  font-weight: 500;
+}
+
+.album-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.shop-page {
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+  border: 0;
+}
+
+.shop-layout {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.95fr) minmax(260px, 1.05fr);
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.shop-vinyl-media {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  border: 1px solid rgba(32, 23, 21, 0.35);
+  border-radius: 0.55rem;
+  background: rgba(207, 207, 207, 0.92);
+  object-fit: cover;
+}
+
+.shop-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid rgba(32, 23, 21, 0.2);
+  border-radius: 0.55rem;
+  background: rgba(245, 245, 245, 0.75);
+}
+
+.shop-details h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.shop-details p {
+  margin: 0;
+  line-height: 1.55;
+}
+
+.shop-label {
+  font-weight: 700;
+  margin-top: 0.2rem;
+}
+
+.shop-select {
+  min-height: 2.8rem;
+  border: 1px solid rgba(32, 23, 21, 0.25);
+  border-radius: 0.5rem;
+  padding: 0.55rem 0.75rem;
+  font: inherit;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--line);
+}
+
+.contact-page {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.contact-card,
+.contact-form-placeholder {
+  padding: 1rem 1.1rem;
+  border: 1px solid rgba(32, 23, 21, 0.2);
+  background: rgba(245, 245, 245, 0.75);
+}
+
+.contact-card h3,
+.contact-form-placeholder h3 {
+  margin: 0 0 0.6rem;
+  font-size: 1.08rem;
+}
+
+.contact-card p {
+  margin: 0 0 0.45rem;
+}
+
+.form-row-placeholder,
+.form-area-placeholder {
+  display: flex;
+  align-items: center;
+  min-height: 2.6rem;
+  margin-bottom: 0.6rem;
+  padding: 0 0.75rem;
+  border: 1px solid rgba(32, 23, 21, 0.2);
+  background: rgba(255, 255, 255, 0.85);
+  color: var(--muted);
+}
+
+.form-area-placeholder {
+  min-height: 5.8rem;
+  align-items: flex-start;
+  padding-top: 0.55rem;
+}
+
+.contact-cta {
+  margin-top: 0.4rem;
+  min-width: 180px;
+}
+
 .hero {
   display: grid;
   grid-template-columns: minmax(260px, 0.92fr) minmax(320px, 1.08fr);
@@ -539,6 +724,29 @@ tbody tr:hover {
   }
 
   .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .page-surface {
+    min-height: auto;
+  }
+
+  .album-grid {
+    grid-template-columns: 1fr;
+    width: 100%;
+    max-width: 360px;
+    gap: 1rem;
+  }
+
+  .shop-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .shop-vinyl-media {
+    max-width: 520px;
+  }
+
+  .contact-grid {
     grid-template-columns: 1fr;
   }
 

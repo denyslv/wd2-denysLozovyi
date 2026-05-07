@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Broken Vinyl Club | Tour</title>
+  <title>Broken Vinyl Club | Shop</title>
   <meta
     name="description"
-    content="Broken Vinyl Club - Tour"
+    content="Broken Vinyl Club - Shop"
   >
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,7 +35,7 @@
           >
         </a>
         <div class="brand-copy">
-          <p class="eyebrow">Tour</p>
+          <p class="eyebrow">Shop</p>
           <h1>Broken Vinyl Club</h1>
         </div>
       </div>
@@ -52,10 +52,8 @@
       <nav class="site-nav" id="site-navigation" aria-label="Primary navigation">
         <ul>
           <li><a href="./index.html">Home</a></li>
-          <li><a href="./our-story.html">Our Story</a></li>
           <li><a href="./music.html">Music</a></li>
-          <li><a class="is-active" href="./tour.html" aria-current="page">Tour</a></li>
-          <li><a href="./exclusive.html">Exclusive</a></li>
+          <li><a class="is-active" href="./shop.html" aria-current="page">Shop</a></li>
           <li><a href="./contact.html">Contact</a></li>
         </ul>
       </nav>
@@ -64,13 +62,37 @@
     <div class="mobile-nav-overlay" id="mobile-nav-overlay" hidden></div>
 
     <main id="main-content">
-      <section class="section-panel" aria-labelledby="page-title">
-        <div class="section-heading">
-          <p class="section-kicker">Tour</p>
-          <h2 id="page-title">See us live in rooms that shake with energy.</h2>
-          <p>
-            Our live set focuses on atmosphere and connection, with each show arranged for the crowd in front of us. Check dates, venues, and ticket information for upcoming performances.
-          </p>
+      <section class="section-panel page-surface shop-page" aria-labelledby="page-title">
+        <div class="page-heading">
+          <h2 id="page-title">Vinyl Shop</h2>
+        </div>
+
+        <div class="shop-layout">
+          <img
+            class="shop-vinyl-media"
+            src="./public/images/vinyl-record-exclusive.png"
+            alt="Broken Vinyl Club vinyl record"
+          >
+
+          <div class="shop-details">
+            <h3>Limited Pressing Collection</h3>
+            <p>
+              Bring the warmth of analogue sound home with our signature 12-inch pressing. Each
+              record is cut for depth and texture, with full artwork sleeves inspired by our live sets.
+            </p>
+            <p>
+              Includes lyric insert, matte cover finish, and digital download code.
+            </p>
+
+            <label class="shop-label" for="album-select">Choose an album</label>
+            <select id="album-select" class="shop-select" name="album">
+              <option>Neon Static Dreams (2026)</option>
+              <option>Midnight Warehouse Session (2025)</option>
+              <option>Dust on the Needle (2024)</option>
+            </select>
+
+            <button class="button button-primary" type="button">Buy Vinyl</button>
+          </div>
         </div>
       </section>
     </main>
