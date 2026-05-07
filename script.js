@@ -3,50 +3,94 @@ document.body.classList.add("js-ready");
 
 const menuToggle = document.querySelector(".menu-toggle");
 const siteNav = document.querySelector(".site-nav");
-const toast = document.querySelector("#coming-soon-toast");
-const navLinks = document.querySelectorAll("[data-coming-soon]");
+const navOverlay = document.querySelector("#mobile-nav-overlay");
 const yearSlot = document.querySelector("#current-year");
 const revealTargets = document.querySelectorAll(".section-panel");
-
-let toastTimer;
+const mobileMedia = window.matchMedia("(max-width: 900px)");
+let mobileNavPanel = null;
 
 if (yearSlot) {
   yearSlot.textContent = new Date().getFullYear();
 }
 
-if (menuToggle && siteNav) {
-  menuToggle.addEventListener("click", () => {
-    const isOpen = siteNav.classList.toggle("is-open");
-    menuToggle.setAttribute("aria-expanded", String(isOpen));
-  });
+if (siteNav && navOverlay) {
+  mobileNavPanel = siteNav.cloneNode(true);
+  mobileNavPanel.classList.remove("site-nav");
+  mobileNavPanel.classList.add("mobile-nav-panel");
+  mobileNavPanel.id = "mobile-navigation";
+  mobileNavPanel.setAttribute("aria-label", "Mobile navigation");
+  navOverlay.appendChild(mobileNavPanel);
 }
 
-const showToast = (message) => {
-  if (!toast) {
+if (menuToggle && mobileNavPanel) {
+  menuToggle.setAttribute("aria-controls", "mobile-navigation");
+}
+
+const closeMobileNav = () => {
+  if (!menuToggle || !navOverlay || !mobileNavPanel) {
     return;
   }
 
-  toast.textContent = message;
-  toast.classList.add("is-visible");
-
-  window.clearTimeout(toastTimer);
-  toastTimer = window.setTimeout(() => {
-    toast.classList.remove("is-visible");
-  }, 2600);
+  mobileNavPanel.classList.remove("is-open");
+  navOverlay.classList.remove("is-open");
+  navOverlay.hidden = true;
+  menuToggle.setAttribute("aria-expanded", "false");
+  document.body.classList.remove("nav-open");
 };
 
-navLinks.forEach((link) => {
-  link.addEventListener("click", (event) => {
-    event.preventDefault();
-    const pageName = link.dataset.comingSoon || "This page";
-    showToast(`${pageName} is the next page to build. Homepage review comes first.`);
+const openMobileNav = () => {
+  if (!menuToggle || !navOverlay || !mobileNavPanel) {
+    return;
+  }
 
-    if (siteNav && menuToggle && siteNav.classList.contains("is-open")) {
-      siteNav.classList.remove("is-open");
-      menuToggle.setAttribute("aria-expanded", "false");
+  mobileNavPanel.classList.add("is-open");
+  navOverlay.hidden = false;
+  navOverlay.classList.add("is-open");
+  menuToggle.setAttribute("aria-expanded", "true");
+  document.body.classList.add("nav-open");
+};
+
+if (menuToggle && siteNav && navOverlay && mobileNavPanel) {
+  menuToggle.addEventListener("click", () => {
+    const isOpen = navOverlay.classList.contains("is-open");
+
+    if (isOpen) {
+      closeMobileNav();
+    } else {
+      openMobileNav();
     }
   });
-});
+
+  navOverlay.addEventListener("click", (event) => {
+    if (event.target === navOverlay) {
+      closeMobileNav();
+    }
+  });
+
+  mobileNavPanel.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      closeMobileNav();
+    });
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && navOverlay.classList.contains("is-open")) {
+      closeMobileNav();
+    }
+  });
+
+  const handleViewportChange = (event) => {
+    if (!event.matches) {
+      closeMobileNav();
+    }
+  };
+
+  if (typeof mobileMedia.addEventListener === "function") {
+    mobileMedia.addEventListener("change", handleViewportChange);
+  } else if (typeof mobileMedia.addListener === "function") {
+    mobileMedia.addListener(handleViewportChange);
+  }
+}
 
 if ("IntersectionObserver" in window) {
   const observer = new IntersectionObserver(
