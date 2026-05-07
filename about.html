@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Broken Vinyl Club | Music</title>
+  <title>Broken Vinyl Club | About</title>
   <meta
     name="description"
-    content="Broken Vinyl Club - Music"
+    content="Broken Vinyl Club - About"
   >
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,7 +35,7 @@
           >
         </a>
         <div class="brand-copy">
-          <p class="eyebrow">Music</p>
+          <p class="eyebrow">About</p>
           <h1>Broken Vinyl Club</h1>
         </div>
       </div>
@@ -52,10 +52,10 @@
       <nav class="site-nav" id="site-navigation" aria-label="Primary navigation">
         <ul>
           <li><a href="./index.html">Home</a></li>
-          <li><a class="is-active" href="./music.html" aria-current="page">Music</a></li>
+          <li><a href="./music.html">Music</a></li>
           <li><a href="./shop.html">Shop</a></li>
           <li><a href="./contact.html">Contact</a></li>
-          <li><a href="./about.html">About</a></li>
+          <li><a class="is-active" href="./about.html" aria-current="page">About</a></li>
         </ul>
       </nav>
     </header>
@@ -63,38 +63,46 @@
     <div class="mobile-nav-overlay" id="mobile-nav-overlay" hidden></div>
 
     <main id="main-content">
-      <section class="section-panel page-surface music-page" aria-labelledby="page-title">
-        <div class="page-heading">
-          <h2 id="page-title">Albums</h2>
+      <section class="section-panel about-page" aria-labelledby="about-title">
+        <div class="section-heading about-intro">
+          <p class="section-kicker">About This Website</p>
+          <h2 id="about-title">Tools used to build Broken Vinyl Club</h2>
+          <p>
+            I chose a classic HTML, CSS, and JavaScript structure with no framework dependencies.
+            The website uses semantic markup for accessible structure and reusable layout patterns.
+          </p>
+          <p>
+            Styling is managed with reusable CSS classes, custom properties, and responsive media
+            queries. Interactive behavior is handled with vanilla JavaScript.
+          </p>
         </div>
 
-        <div class="album-grid">
-          <article class="album-card">
-            <img
-              class="album-cover-media"
-              src="./public/images/album-art/neon-static-dreams.png"
-              alt="Neon Static Dreams album art"
-            >
-            <h3>Neon Static Dreams</h3>
-            <p>2026</p>
+        <div class="about-tools-grid" aria-label="Tools used">
+          <article class="about-tool-card">
+            <h3>Development</h3>
+            <p><strong>IDE:</strong> Cursor</p>
+            <p><strong>Version control:</strong> GitHub</p>
           </article>
-          <article class="album-card">
-            <img
-              class="album-cover-media"
-              src="./public/images/album-art/midnight-warehouse.png"
-              alt="Midnight Warehouse Session album art"
-            >
-            <h3>Midnight Warehouse Session</h3>
-            <p>2025</p>
+
+          <article class="about-tool-card">
+            <h3>Design &amp; Assets</h3>
+            <p><strong>Logo & Design:</strong> Figma </p>
+            <p><strong>Fonts:</strong> Google Fonts (CDN)</p>
+            <p><strong>Image generation:</strong> Google Gemini, OpenAI ChatGPT</p>
           </article>
-          <article class="album-card">
-            <img
-              class="album-cover-media"
-              src="./public/images/album-art/dust-on-the-needle.png"
-              alt="Dust on the Needle album art"
-            >
-            <h3>Dust on the Needle</h3>
-            <p>2024</p>
+
+          <article class="about-tool-card">
+            <h3>Implementation</h3>
+            <p><strong>Frontend:</strong> HTML5, CSS3, JavaScript</p>
+            <p><strong>Assisted coding:</strong> OpenAI Codex Agent</p>
+          </article>
+
+          <article class="about-tool-card">
+            <h3>Reference</h3>
+            <p>
+              JavaScript reference and syntax checks from
+              <a href="https://www.w3schools.com/js/default.asp">W3Schools</a>.
+            </p>
           </article>
         </div>
       </section>
@@ -108,4 +116,3 @@
   </div>
 </body>
 </html>
-

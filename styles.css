@@ -401,6 +401,42 @@ a {
   min-width: 180px;
 }
 
+.about-page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.about-intro {
+  max-width: 54rem;
+}
+
+.about-tools-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.about-tool-card {
+  padding: 1rem 1.1rem;
+  border: 1px solid rgba(32, 23, 21, 0.2);
+  border-radius: 0.55rem;
+  background: rgba(245, 245, 245, 0.75);
+}
+
+.about-tool-card h3 {
+  margin: 0 0 0.55rem;
+  font-size: 1.08rem;
+}
+
+.about-tool-card p {
+  margin: 0 0 0.4rem;
+}
+
+.about-tool-card a {
+  text-decoration-thickness: 1px;
+}
+
 .hero {
   display: grid;
   grid-template-columns: minmax(260px, 0.92fr) minmax(320px, 1.08fr);
@@ -747,6 +783,10 @@ tbody tr:hover {
   }
 
   .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-tools-grid {
     grid-template-columns: 1fr;
   }
 
