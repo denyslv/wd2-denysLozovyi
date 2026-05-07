@@ -17,4 +17,12 @@
   --shadow-soft: 0 18px 50px rgba(0, 0, 0, 0.16);
   --shadow-button: 0 10px 22px rgba(35, 18, 18, 0.28);
   --content-width: 1240px;
-}
+  --header-gradient:
+    radial-gradient(circle at 88% 20%, rgba(247, 247, 247, 0.12), transparent 18%),
+    linear-gradient(98deg, #114cdd 0%, var(--titlebar) 42%, #2d67ff 75%, #4f40d6 100%);
+  --main-surface-gradient:
+    radial-gradient(circle at 82% 8%, rgba(141, 171, 176, 0.14), transparent 18%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(250, 243, 224, 0.38));
+  --table-gradient:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.88), rgba(255, 250, 235, 0.58));
+  }

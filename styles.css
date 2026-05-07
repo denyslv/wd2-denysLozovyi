@@ -12,7 +12,7 @@ body {
   margin: 0;
   min-height: 100vh;
   font-family: "Space Grotesk", "Segoe UI", sans-serif;
-  background: var(--paper-white);
+  background: var(--main-surface-gradient);
   color: var(--text);
 }
 
@@ -46,7 +46,7 @@ a {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: var(--paper-white);
+  background: var(--main-surface-gradient);
 }
 
 .site-header {
@@ -56,9 +56,7 @@ a {
   align-items: center;
   gap: 1rem 1.5rem;
   padding: 1.1rem clamp(1rem, 3vw, 2rem) 3rem;
-  background:
-    radial-gradient(circle at 88% 20%, rgba(247, 247, 247, 0.12), transparent 18%),
-    linear-gradient(98deg, #114cdd 0%, var(--titlebar) 42%, #2d67ff 75%, #5a46ff 100%);
+  background: var(--header-gradient);
   isolation: isolate;
   overflow: hidden;
   -webkit-mask:
@@ -216,9 +214,7 @@ a {
   gap: clamp(2rem, 4vw, 4.5rem);
   align-items: center;
   border-bottom: 1px solid var(--line-soft);
-  background:
-    radial-gradient(circle at 80% 4%, rgba(141, 171, 176, 0.12), transparent 14%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0.78));
+  
 }
 
 .hero-art {
@@ -326,11 +322,6 @@ caption {
   box-shadow: 0 16px 30px rgba(35, 18, 18, 0.34);
 }
 
-.schedule {
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(255, 245, 218, 0.38));
-}
-
 .section-heading {
   max-width: 42rem;
 }
@@ -345,7 +336,7 @@ caption {
   overflow-x: auto;
   border-radius: 1.4rem;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.88), rgba(255, 245, 218, 0.58));
+    var(--table-gradient);
   box-shadow:
     inset 0 0 0 1px rgba(32, 23, 21, 0.06),
     var(--shadow-soft);
