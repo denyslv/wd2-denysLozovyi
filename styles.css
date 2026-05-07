@@ -231,18 +231,6 @@ a {
   overflow: hidden;
 }
 
-.hero-art::before {
-  content: "";
-  position: absolute;
-  inset: -5%;
-  background:
-    radial-gradient(circle, rgba(255, 246, 235, 0.92) 0 1px, transparent 1px) 0 0 / 8px 8px,
-    radial-gradient(circle, rgba(255, 246, 235, 0.6) 0 1px, transparent 1px) 18px 12px / 10px 10px;
-  mix-blend-mode: screen;
-  filter: blur(1.5px);
-  opacity: 0.55;
-}
-
 .hero-art span {
   position: absolute;
   left: 1.2rem;
